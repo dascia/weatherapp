@@ -1,18 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <WeatherComponent></WeatherComponent>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import WeatherComponent from './components/WeatherComponent.vue';
 
-export default defineComponent({
+export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-});
+    WeatherComponent,
+  },
+};
 </script>
 
 <style>
@@ -20,8 +18,11 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 </style>
